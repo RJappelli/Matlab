@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{matlab-prettifier}
+\title{CompEcon - Problem Set 1}
+\author{Yuna Aulia and Ruggero Jappelli}
+\date{January 2019}
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Exercise 3}
+\subsection{}
+\textbf{Matlab Code for Bisection Algorithm}
+\lstinputlisting[style = Matlab-editor]{Exercise3.m}
+\subsection{}
+We use the bisection method to compute the zeroes of the following functions:
+(a) $$f(x) = x^3 + 4 - 1/x$$ has a root $x = 0.249038$\\
+
+(b) $$f(x) = -exp(-x) + exp(-x^2) $$ has a root $x = 0$ and a root at $51$, obtained varying the starting points.
+
+\subsection{}
+$$b * q + d * q^\phi - (a - c) = 0 $$
+Assume $$ a = 3, b = 0.5, c = d = 1, \psi = 0.5$$
+We then have $$ \dfrac{q}{2} + \sqrt{q} -2 = 0 $$
+  analytical solution:   \\
+$$ \dfrac{q}{2} + \sqrt{q} -2 = 0 $$
+  bisection method: 1.52786 \\
+  with matlab built-in function \textit{fzero}: 1.527864045000420 \\
+  
+  
+  \section{Exercise 4}
+  
+  We load the data with import data as a table, excluding raws with unimportable cells. After cheching with isnan, we have 104 countries in our dataset.\\
+  \textbf{Matlab Code for A Contribution to the Empirics of Economic Growth}
+\lstinputlisting[style = Matlab-editor]{Exercise4.m}
+
+  \\
+  \\
+  
+\end{document}
