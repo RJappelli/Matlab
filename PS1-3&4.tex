@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{matlab-prettifier}
+\usepackage[margin=1in]{geometry}
+
 \title{CompEcon - Problem Set 1}
 \author{Yuna Aulia and Ruggero Jappelli}
 \date{January 2019}
@@ -40,5 +42,27 @@ $$ \dfrac{q}{2} + \sqrt{q} -2 = 0 $$
 
   \\
   \\
+  
+  
+  \subsection{Exercise 4}
+  \begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c c}\hline\hline
+\\ 
+  \multicolumn{3}{c}{\textit{Dependent variable: log difference GDP per working-age person 1960-1985 }} \\ 
+\\[-1.8ex]  
+            &\multicolumn{1}{c}{(Non Oil)}&\multicolumn{1}{c}{(Intermediate)}&\multicolumn{1}{c}{(OECD)}\\
+            &\multicolumn{1}{c}{OLS}&\multicolumn{1}{c}{OLS}&\multicolumn{1}{c}{OLS}\\
+\hline\hline\\[-1.8ex] 
+CONSTANT  & 1.112436013441833 & 1.655664821192208 & 2.611627292608531\\
+log(gdp1960) & -0.296562179734063 & -0.373493872465916 & -0.399271205189533\\
+log(I/y)  & 0.521228337626152 & 0.536026177101351 &  0.353093631576787\\
+log(popgrowth + g + $\delta$) & -0.181085002271978 & -0.187462038101107 & -0.215690701932586\\
+log(school)  & 0.233556041609175 & 0.273303053483721 & 0.235819465739553\\
+\hline\hline\\[-1.8ex] 
+\(N\)       &        98         &       75          &        22\\
+\hline\end{tabular}
+\end{table}
+The coefficients in the table mirror very closely the ones in Table V in  Mankiw, Romer, and Weil (1992): A Contribution to
+the Empirics of Economic Growth, in: The Quarterly Journal of Economics, Vol. 107(2), pp. 407-437, with the exception of log(popgrowth + g + $\delta$), since it is different by construction, and consequently the CONSTANT terms.
   
 \end{document}
