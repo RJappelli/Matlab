@@ -19,32 +19,41 @@
 \textbf{Matlab Code for Bisection Algorithm}
 \lstinputlisting[style = Matlab-editor]{Exercise3.m}
 \subsection{}
-We use the bisection method to compute the zeroes of the following functions:
-(a) $$f(x) = x^3 + 4 - 1/x$$ has a root $x = 0.249038$\\
+We use the bisection method to compute the zeroes of the following functions: \\
+The function $$f(x) = x^3 + 4 - 1/x$$ has a root $x = 0.249038$\\
 
-(b) $$f(x) = -exp(-x) + exp(-x^2) $$ has a root $x = 0$ and a root at $51$, obtained varying the starting points.
+The function $$f(x) = -exp(-x) + exp(-x^2) $$ has a root $x = 0$ and a root at $51$, obtained varying the starting points.
 
 \subsection{}
-$$b * q + d * q^\phi - (a - c) = 0 $$
+$$b \times q + d \times q^\phi - (a - c) = 0 $$
 Assume $$ a = 3, b = 0.5, c = d = 1, \psi = 0.5$$
 We then have $$ \dfrac{q}{2} + \sqrt{q} -2 = 0 $$
   analytical solution:   \\
-$$ \dfrac{q}{2} + \sqrt{q} -2 = 0 $$
-  bisection method: 1.52786 \\
-  with matlab built-in function \textit{fzero}: 1.527864045000420 \\
+$$ q = (2 - \dfrac{q}{2})^2$$
+$$ q = 4 +\dfrac{q^2}{4} - 2q  $$
+$$ 0 = \dfrac{q^2}{4} - 3q + 4 $$
+$$ q^2 - 12q + 16 = 0$$
+$$ q = \dfrac{12 \pm \sqrt{12^2 - 64}}{2}$$
+The positive solution is 1.527864045. \\
+  The solution computed with the bisection method is 1.52786 \\
+  Similarly, with the matlab built-in function fzero the solution is: 1.527864045000420 \\
   
   
-  \section{Exercise 4}
-  
-  We load the data with import data as a table, excluding raws with unimportable cells. After cheching with isnan, we have 104 countries in our dataset.\\
-  \textbf{Matlab Code for A Contribution to the Empirics of Economic Growth}
+  \section{Exercise 4 - A Contribution to the Empirics of Economic Growth}
+   \begin{center}
+      \textbf{Matlab Code for Exercises 4.1}
+  \end{center}
+  We load the data with import data as a table, excluding rows with unimportable cells. After cheching with the matlab function isnan, we have 104 countries in our dataset.\\
+  \begin{center}
+      \textbf{Matlab Code for Exercises 4.2-4.3}
+  \end{center}
 \lstinputlisting[style = Matlab-editor]{Exercise4.m}
 
   \\
   \\
-  
-  
-  \subsection{Exercise 4}
+ \begin{center}
+      \textbf{Exercises 4 Part 4}
+  \end{center}
   \begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
 \begin{tabular}{l c c c}\hline\hline
 \\ 
@@ -62,7 +71,7 @@ log(school)  & 0.233556041609175 & 0.273303053483721 & 0.235819465739553\\
 \(N\)       &        98         &       75          &        22\\
 \hline\end{tabular}
 \end{table}
-The coefficients in the table mirror very closely the ones in Table V in  Mankiw, Romer, and Weil (1992): A Contribution to
-the Empirics of Economic Growth, in: The Quarterly Journal of Economics, Vol. 107(2), pp. 407-437, with the exception of log(popgrowth + g + $\delta$), since it is different by construction, and consequently the CONSTANT terms.
+The coefficients in the table mirror very closely the ones in Table V in A Contribution to
+the Empirics of Economic Growth \footnote{Mankiw, Romer, and Weil (1992), The Quarterly Journal of Economics, Vol. 107(2), pp. 407-437}, with the exception of log(popgrowth + g + $\delta$), since it is different by construction, and consequently the CONSTANT terms. All the other coefficient estimates are consistent with the results in Mankiw, Romer, and Weil (1992).
   
 \end{document}
